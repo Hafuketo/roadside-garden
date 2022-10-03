@@ -1,0 +1,16 @@
+footer {
+	/* Makes footer stick to bottom of screen */
+	position: sticky;
+	top: 100%;
+
+	/* Makes text get some room from bottom*/
+	padding: 0.5rem 0 1rem;
+
+	@include header-background;
+}
+
+footer p,
+footer a {
+	color: $col_white;
+	text-shadow: 1px 1px 3px #000;
+}

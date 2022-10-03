@@ -1,0 +1,79 @@
+/* *********************************  Text Settings  ********************************* */
+
+@font-face {
+	font-family: vibes;
+	src: url(../GreatVibes-Regular.ttf);
+}
+
+* {
+	/* Default font */
+	font-family: "Noto Sans", sans-serif;
+
+	/* Removes list-style unless specified */
+	list-style: none;
+}
+
+/* Class for making text centered */
+.centered-text {
+	text-align: center;
+}
+
+h1 {
+	span {
+		font-family: vibes, "Brush Script MT", cursive;
+	}
+	font-family: vibes, "Brush Script MT", cursive;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 3rem;
+
+	@include lg {
+		font-size: 3.6rem;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+	@include lg {
+		font-size: 2.4rem;
+	}
+}
+
+h3 {
+	font-size: 1.3rem;
+	margin-block-end: 0;
+	@include lg {
+		font-size: 2rem;
+	}
+}
+
+p,
+li,
+time,
+adress,
+figcaption,
+div,
+form,
+input,
+textarea,
+select {
+	font-size: 1rem;
+}
+
+a {
+	color: black;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $c_trd;
+	}
+}
+
+.date {
+	font-style: italic;
+	color: $c_main_d;
+}
+
+.colRed {
+	color: red;
+}

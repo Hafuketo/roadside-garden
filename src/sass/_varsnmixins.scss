@@ -1,0 +1,15 @@
+$topbar_size_m: 3.5rem;
+$topbar_size_d: 5rem;
+
+// Sizes for navigation
+$topnav_size_m: 0rem;
+$topnav_size_d: 3rem;
+
+// Where the main content starts
+$body_start_m: $topnav_size_m + $topbar_size_m;
+$body_start_d: $topnav_size_d + $topbar_size_d;
+
+// Style for background on various items
+@mixin header-background {
+	background-color: $c_main;
+}

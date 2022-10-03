@@ -1,0 +1,86 @@
+Projekt
+	// Save values
+	let menuIdVal = menuWeekInput.value;
+	let menuMoVal = menuMoInput.value;
+	let menuTuVal = menuTuInput.value;
+	let menuWeVal = menuWeInput.value;
+	let menuThVal = menuThInput.value;
+	let menuFrVal = menuFrInput.value;
+	let menuSaVal = menuSaInput.value;
+	let menuSuVal = menuSuInput.value;
+	let menuDeVal = menuDeInput.value;
+
+
+
+	// Default booleans for weekdays & dessert
+	let moBool: boolean = true;
+	let tuBool: boolean = true;
+	let weBool: boolean = true;
+	let thBool: boolean = true;
+	let frBool: boolean = true;
+	let saBool: boolean = true;
+	let suBool: boolean = true;
+	let deBool: boolean = true;
+
+	// Check Tuesday input
+	if (menuTuVal.length > 128 || menuTuVal.length < 1) {
+		tuMsg.innerText = "Tisdagsrätten måste vara mellan 1-128 tecken";
+		tuBool = false;
+	} else {
+		tuMsg.innerText = "";
+		tuBool = true;
+	}
+
+	// Check Wednesday input
+	if (menuWeVal.length > 128 || menuWeVal.length < 1) {
+		weMsg.innerText = "Onsdagsrätten måste vara mellan 1-128 tecken";
+		weBool = false;
+	} else {
+		weMsg.innerText = "";
+		weBool = true;
+	}
+
+	// Check Tuesday input
+	if (menuThVal.length > 128 || menuThVal.length < 1) {
+		thMsg.innerText = "Torsdagssrätten måste vara mellan 1-128 tecken";
+		thBool = false;
+	} else {
+		thMsg.innerText = "";
+		thBool = true;
+	}
+
+	// Check Tuesday input
+	if (menuFrVal.length > 128 || menuFrVal.length < 1) {
+		frMsg.innerText = "Fredagsrätten måste vara mellan 1-128 tecken";
+		frBool = false;
+	} else {
+		frMsg.innerText = "";
+		frBool = true;
+	}
+
+	// Check Tuesday input
+	if (menuSaVal.length > 128 || menuSaVal.length < 1) {
+		saMsg.innerText = "Lördagsrätten måste vara mellan 1-128 tecken";
+		saBool = false;
+	} else {
+		saMsg.innerText = "";
+		saBool = true;
+	}
+
+	// Check Tuesday input
+	if (menuSuVal.length > 128 || menuSuVal.length < 1) {
+		suMsg.innerText = "Söndagsrätten måste vara mellan 1-128 tecken";
+		suBool = false;
+	} else {
+		suMsg.innerText = "";
+		suBool = true;
+	}
+
+	// Check Tuesday input
+	if (menuDeVal.length > 128 || menuDeVal.length < 1) {
+		deMsg.innerText = "Desserten måste vara mellan 1-128 tecken";
+		deBool = false;
+	} else {
+		deMsg.innerText = "";
+		deBool = true;
+	}

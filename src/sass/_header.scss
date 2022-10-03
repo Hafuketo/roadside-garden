@@ -1,0 +1,229 @@
+header {
+	top: 0;
+	/* Makes navbar scroll with the document */
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	overflow: hidden;
+
+	@include header-background;
+}
+
+/* *********************************  Navigation menu & Hamburger  ********************************* */
+
+#topbar {
+	/* Makes navbar start at top of document, fill width, sets height, background color, put it in front of everything */
+	height: $topbar_size_m;
+	@include lg {
+		height: $topbar_size_d;
+	}
+
+	/* Enable flex for logo and navbar */
+	display: flex;
+
+	/* Sets hamburger menu on the right */
+	justify-content: space-between;
+}
+
+#menu {
+	height: 100%;
+}
+
+/* Hide the links inside the navigation menu by default, different on bigger screens */
+#topnav {
+	width: 100%;
+	display: none;
+	text-align: center;
+	top: $topbar_size_m;
+	@include lg {
+		top: $topbar_size_d;
+	}
+	position: fixed;
+	box-sizing: border-box;
+
+	background-color: $c_sec;
+
+	li {
+		.current {
+			color: $col_2;
+			border-bottom: 0.3rem solid $col_2;
+		}
+		a {
+			/* Text settings */
+			font-size: 1.5rem;
+			display: block;
+			text-decoration: none;
+			font-weight: bolder;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-shadow: 1px 1px $c_trd_l;
+
+			width: 100%;
+			height: 3rem;
+			@include lg {
+				height: 100%;
+				padding: 0 0.4rem;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				@extend .current;
+			}
+		}
+
+		@include lg {
+			margin: 0.2rem 0.3rem auto;
+			display: inline-block;
+			height: 85%;
+			a {
+			}
+		}
+	}
+
+	// No longer hamburger foldout menu on desktop and bigger screens
+	@include lg {
+		display: flex;
+		justify-content: space-around;
+		height: $topnav_size_d;
+
+		//@include header-background;
+
+		ul {
+			height: 100%;
+			margin: 0;
+		}
+	}
+}
+
+/* Website title */
+
+#navtitle {
+	height: 93%;
+	display: flex;
+	text-decoration: none;
+
+	p {
+		color: #fff;
+		//margin: auto 0.1rem;
+		@include lg {
+			margin: auto 0.5rem;
+		}
+	}
+
+	p,
+	span {
+		font-family: vibes, "Brush Script MT", cursive;
+		font-size: 1.2rem;
+		line-height: 0.6rem;
+		text-align: center;
+		text-shadow: 1px 1px 3px #000;
+
+		@include lg {
+			font-size: 2.5rem;
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $c_main_d;
+		border-color: $col_2;
+		p {
+			color: $col_2;
+		}
+	}
+}
+
+/* Website title */
+
+/* Logo */
+
+.logo {
+	width: 2.5rem;
+	height: 2.5rem;
+	@include lg {
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+/* Logo END */
+
+.leftside-button {
+	/* Decides width of link, height is set automatically */
+	width: 5rem;
+
+	/* Makes sure on top of header, fix for firefox */
+	z-index: 20;
+
+	border-radius: 10px;
+
+	/* Center logotype & Bars vertically & horizontally */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+#hamburger-btn {
+	@extend .leftside-button;
+
+	/* Makes the button behave like a link */
+	cursor: pointer;
+
+	div {
+		/* Sets appearance of lines in hamburger menu */
+		width: 36px;
+		height: 5px;
+		background-color: $col_ivory;
+		margin: 3px auto;
+
+		/* Animate colorchange */
+		transition: 0.1s;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		div {
+			background-color: $col_2;
+		}
+	}
+
+	/* Rotate first bar */
+	#bar1.rotate {
+		transform: rotate(-45deg) translate(-8px, 6px);
+	}
+	/* Fade out the second bar */
+	#bar2.rotate {
+		opacity: 0;
+	}
+	/* Rotate last bar */
+	#bar3.rotate {
+		transform: rotate(45deg) translate(-8px, -8px);
+	}
+
+	@include lg {
+		// Still takes up space but invisible once screen becomes bigger
+		visibility: hidden;
+	}
+}
+
+/* *********************************  Skip navigation  ********************************* */
+
+#skip-nav {
+	top: 15rem;
+	position: absolute;
+	left: 1rem;
+	font-weight: bold;
+	padding: 0.2rem;
+	border: 4px solid #000;
+	z-index: -10;
+}
+
+#skip-nav:focus {
+	z-index: 10;
+	top: 10rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Roadside Garden - Om oss</title>
+		<link rel="stylesheet" href="./css/sass.css" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon-16x16.png"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<!-- Skip navigation for mousefree peepz -->
+			<a id="skip-nav" href="#maincontent">Skippa navigering</a>
+
+			<div id="topbar">
+				<span class="leftside-button"> </span>
+
+				<a href="./index.html" id="navtitle">
+					<img class="logo" src="./img/rose.svg" alt="Ikon av en ros" />
+					<p>Roadside Garden</p>
+					<img class="logo" src="./img/rose.svg" alt="Ikon av en ros"
+				/></a>
+
+				<div
+					id="hamburger-btn"
+					aria-label="Öppna eller stäng Hamburger-meny"
+					onclick="showNav()"
+				>
+					<div id="bar1" class="hamburger-bars"></div>
+					<div id="bar2" class="hamburger-bars"></div>
+					<div id="bar3" class="hamburger-bars"></div>
+				</div>
+			</div>
+
+			<nav id="topnav">
+				<!-- Navigation links (hidden by default) -->
+				<ul id="nav-list" class="dispNone">
+					<li><a href="./index.html">Hem</a></li>
+					<li><a href="./meny.html">Meny</a></li>
+					<li><a href="./bokning.html">Boka bord</a></li>
+					<li><a href="./about.html" class="current">Om oss</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id="maincontent">
+				<section id="about">
+					<h1>Om oss</h1>
+					<p>Roadsida Garden öppnade dörrarna för första gången 1983.</p>
+					<p>
+						Sedan dess har vi alltid sett till att göra även ett litet stopp
+						till en upplevelse.
+					</p>
+					<p>
+						Curabitur tempor urna vitae mi convallis molestie. Sed et nisi
+						massa. In in convallis mi. Vivamus semper mi dui, sit amet fermentum
+						elit dignissim eu. Curabitur sed fermentum libero. Maecenas a
+						blandit justo, ut viverra ligula. Duis interdum et nisl sed
+						eleifend. Mauris in leo diam. Quisque ut fermentum neque, ac
+						efficitur orci. Pellentesque id elementum est. Lorem ipsum dolor sit
+						amet, consectetur adipiscing elit. Ut ornare scelerisque nisl eget
+						blandit. Proin velit neque, congue vel sodales at, iaculis a elit.
+						Aenean at rutrum metus, quis porttitor lorem. Morbi ut elit sed
+						massa hendrerit vestibulum et ut augue. Aenean venenatis libero in
+						nibh egestas ullamcorper.
+					</p>
+					<p>
+						Allt som skrivits på den här sidan är fiktivt och har skapats för
+						kursen Webbutveckling III, 7,5 poäng som är en del av
+						<a href="https://www.miun.se/webbutveckling" target="_blank">
+							Mittuniversitetets program Webbutveckling</a
+						>
+						vårterminen 2022.
+					</p>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<p class="centered-text">
+				Copyright 2022 | Roadside Garden | Världens ände 1, 621 37 Staden
+			</p>
+			<p class="centered-text">
+				Telefon: <a href="tel:012345678">012-34 56 78</a> |
+				<a href="mailto:roadside@haffupaffu.com">Maila oss</a>
+			</p>
+			<p class="centered-text">
+				Webbutveckling III - Projekt Fredrik Sandström, 2022
+			</p>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

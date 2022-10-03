@@ -1,0 +1,57 @@
+// Style for Dagens rätt
+.dagens {
+	margin-top: 10vh;
+	max-width: 30rem;
+
+	@include header-background;
+
+	padding: 1rem;
+	color: $col_white;
+	div {
+		padding: 0;
+	}
+	border: 0.5rem solid $c_main_d;
+
+	h2 {
+		text-align: center;
+		font-family: "MedievalSharp", serif;
+		margin: 0;
+	}
+
+	a {
+		color: $col_white;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $c_trd;
+		}
+	}
+}
+
+// Style for hero slider
+
+.hero_slider_button a {
+	@extend .mid-btn;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $col_black;
+	}
+}
+
+// Form 7 styles
+.submit-btn-div {
+	// Puts button in the middle of the form
+	display: flex;
+	justify-content: space-evenly;
+
+	.wpcf7-spinner {
+		// Disables loading spinner when sending form + makes button sit in middle
+		display: none;
+	}
+}
+
+// news
+.article-content {
+	display: flex;
+}

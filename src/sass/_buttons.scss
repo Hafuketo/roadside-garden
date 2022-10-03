@@ -1,0 +1,31 @@
+.mid-btn,
+.button,
+input[type="button"] {
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: bold;
+	color: $col_white;
+
+	background-color: $c_main;
+	padding: 1rem 2rem;
+
+	border: 3px solid $c_main_d;
+	border-radius: 10px;
+
+	cursor: pointer;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $c_trd;
+	}
+}
+
+.mpbh-book-button {
+	@extend .mid-btn;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: space-around;
+}

@@ -1,0 +1,140 @@
+/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	position: relative;
+	margin: auto;
+	background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+	margin: auto;
+}
+
+.slideimg {
+	margin: auto;
+	width: 100%;
+	height: 80vh;
+	max-height: 70vw;
+	object-fit: cover;
+}
+
+.prev {
+	left: 0.4rem;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0.4rem;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+
+	margin-top: -1.5rem; // Move buttons up a little bit
+	padding: 0.3rem;
+	color: #000;
+	background-color: $col_seethrough;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.2s ease;
+	border-radius: 8px;
+	user-select: none;
+
+	@include md {
+		padding: 0.8rem;
+	}
+
+	/* On hover, change background color */
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+		background-color: $c_main;
+	}
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+// Text over image
+
+/* Container holding the image and the text */
+.img-text-container {
+	position: relative;
+}
+
+.img-text {
+	// Center image
+	font-family: "Noto Sans", sans-serif;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0.5rem;
+	margin-top: -0.5rem;
+
+	background-color: $col_seethrough;
+	color: white;
+	text-shadow: 1px 1px 3px #000;
+
+	border-radius: 8px;
+	font-size: 1.5rem;
+
+	line-height: 2.5rem;
+
+	a {
+		font-variant: small-caps;
+		text-decoration: none;
+		font-weight: bold;
+
+		background-color: $c_main;
+		color: #fff;
+		padding: 0 0.7rem;
+
+		border: 5px ridge $c_main_d;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $c_trd;
+		}
+	}
+
+	@include md {
+		padding: 2rem;
+		font-size: 2.5rem;
+	}
+}

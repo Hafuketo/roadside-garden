@@ -1,0 +1,41 @@
+* {
+	/* Makes boxes not exceed their spacing by default */
+	box-sizing: border-box;
+
+	/* Initializes padding for all items */
+	padding: 0;
+}
+
+body {
+	/* Removes all margin for the body, helping fullwidth-items take up whole screen */
+	margin: 0;
+
+	/* Colorchange from upper left to lower right */
+	background-color: $c_main_back;
+
+	/* Locks the background in place*/
+	background-attachment: fixed;
+
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+main {
+	/* Makes site start a bit below the Top nav, put everything in the middle + add a little space from footer */
+	margin: $body_start_m auto;
+
+	/* Helping footer stay at bottom */
+	min-height: 55vh;
+
+	@include md {
+		margin-top: $body_start_d;
+	}
+}
+
+section {
+	/* Makes text take up 90% of width unless screen is very big */
+	width: 90%;
+	max-width: 50rem;
+
+	margin: 0 auto;
+}

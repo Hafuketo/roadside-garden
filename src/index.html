@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hem</title>
+		<link rel="stylesheet" href="./css/sass.css" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon-16x16.png"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<!-- Skip navigation for mousefree peepz -->
+			<a id="skip-nav" href="#maincontent">Skippa navigering</a>
+
+			<div id="topbar">
+				<span class="leftside-button"> </span>
+
+				<a href="./index.html" id="navtitle">
+					<p>Roadside Garden</p>
+					<img class="logo" src="./img/rose.svg" alt="Ikon av en ros"
+				/></a>
+
+				<div
+					id="hamburger-btn"
+					aria-label="Öppna eller stäng Hamburger-meny"
+					onclick="showNav()"
+				>
+					<div id="bar1" class="hamburger-bars"></div>
+					<div id="bar2" class="hamburger-bars"></div>
+					<div id="bar3" class="hamburger-bars"></div>
+				</div>
+			</div>
+
+			<nav id="topnav">
+				<!-- Navigation links (hidden by default) -->
+				<ul id="nav-list" class="dispNone">
+					<li><a href="#">Hem</a></li>
+					<li><a href="./meny.html">Meny</a></li>
+					<li><a href="./bokning.html">Boka bord</a></li>
+					<li><a href="./about.html">Om oss</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id="maincontent">
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+					<!-- Full-width images with number and caption text -->
+					<div class="mySlides fade">
+						<picture>
+							<source
+								class="slideimg"
+								srcset="./img/diner.webp"
+								type="image/webp" />
+							<img
+								class="slideimg"
+								src="./img/diner.jpg"
+								alt="Restaurangens interiör"
+						/></picture>
+						<p class="img-text">
+							Välkommen till Roadside Garden<br />
+							<br />
+							<a href="#bokningslank">Boka Bord</a>
+						</p>
+					</div>
+
+					<div class="mySlides fade">
+						<picture>
+							<source
+								class="slideimg"
+								srcset="./img/leek.webp"
+								type="image/webp"
+							/>
+							<img
+								class="slideimg"
+								src="./img/leek.jpg"
+								alt="Hand som tar upp finhackad salladslök och strör det över ris"
+							/>
+						</picture>
+						<p class="img-text">
+							Lunch vardagar 11-14 <br />
+							Brunch helger 10.30-15 <br />
+							<br />
+							<a href="./meny.html">Se Meny</a>
+						</p>
+					</div>
+
+					<div class="mySlides fade">
+						<picture>
+							<source
+								class="slideimg"
+								srcset="./img/fish.webp"
+								type="image/webp"
+							/>
+							<img
+								class="slideimg"
+								src="./img/fish.jpg"
+								alt="Tallrik med fisk, ris och grönsaker"
+							/>
+						</picture>
+						<p class="img-text">
+							Öppet alla dagar<br />
+							<br />
+							<a href="#bokningslank">Boka Bord</a>
+						</p>
+					</div>
+
+					<div class="mySlides fade">
+						<picture>
+							<source
+								class="slideimg"
+								srcset="./img/pasta1.webp"
+								type="image/webp"
+							/>
+							<img
+								class="slideimg"
+								src="./img/pasta1.jpg"
+								alt="Pastarätt med snurrande gaffel"
+							/>
+						</picture>
+						<p class="img-text">
+							Vi gör vår egen pasta<br />
+							<br />
+							<a href="./about.html">Om Oss</a>
+						</p>
+					</div>
+
+					<div class="mySlides fade">
+						<picture>
+							<source
+								class="slideimg"
+								srcset="./img/dessert1.webp"
+								type="image/webp"
+							/>
+							<img
+								class="slideimg"
+								src="./img/dessert1.jpg"
+								alt="Paj med glassboll"
+							/>
+						</picture>
+						<p class="img-text">
+							Dessert ingår alltid<br />
+							<br />
+							<a href="#bokningslank">Boka Bord</a>
+						</p>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<span id="bokningslank"></span>
+				<br />
+				<br />
+				<h1>Boka bord</h1>
+				<section id="addBookings">
+					<p class="centered-text">
+						Vid bokning samma dag eller sällskap större än 8 personer;
+						<br />
+						Vänligen ring oss på telefon:
+						<a href="tel:012345678">012-34 56 78</a>. Det går även att nå oss
+						via e-post på
+						<a href="mailto:roadside@haffupaffu.com">roadside@haffupaffu.com</a
+						>.
+					</p>
+					<form id="bookingForm" method="POST">
+						<div class="form-control">
+							<label for="booking-guests">Antal gäster: </label>
+							<span id="guestsMsg" style="color: red"></span>
+							<br />
+							<select name="booking-guests" id="booking-guests">
+								<option value="1">1</option>
+								<option value="2" selected>2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option></select
+							><br /><br />
+						</div>
+
+						<div class="form-control">
+							<label for="booking-date">Datum: </label>
+							<span id="dateMsg" style="color: red"></span>
+							<br />
+							<input
+								type="datetime-local"
+								name="booking-date"
+								id="booking-date"
+								required
+							/>
+							<br />
+							<br />
+						</div>
+
+						<div class="form-control">
+							<label for="booking-name">Namn: </label>
+							<span id="nameMsg" style="color: red"></span>
+							<br />
+							<input
+								type="text"
+								name="booking-name"
+								id="booking-name"
+								placeholder="Ditt namn"
+								required
+							/><br /><br />
+						</div>
+
+						<div class="form-control">
+							<label for="booking-email">Epost: </label>
+							<span id="emailMsg" style="color: red"></span>
+							<br />
+							<input
+								type="email"
+								name="booking-email"
+								id="booking-email"
+								placeholder="Din E-post"
+								required
+							/><br /><br />
+						</div>
+
+						<fieldset class="form-control">
+							<legend>Var vill ni äta?</legend>
+							<span id="takeMsg" style="color: red"></span>
+							<input
+								type="radio"
+								name="booking-takeaway"
+								id="booking-takeaway-nej"
+								value="0"
+								checked
+							/>
+							<label for="booking-takeaway-nej">Äta här</label>
+
+							<input
+								type="radio"
+								name="booking-takeaway"
+								id="booking-takeaway-ja"
+								value="1"
+							/>
+							<label for="booking-takeaway-ja">Takeaway</label>
+							<br /><br /><br />
+						</fieldset>
+
+						<div class="form-control">
+							<label for="booking-other">Övrig info: </label>
+							<span id="otherMsg" style="color: red"></span>
+							<br />
+							<textarea
+								name="booking-other"
+								id="booking-other"
+								placeholder="Allergier, speciella behov etc."
+								maxlength="512"
+							></textarea>
+							<br />
+						</div>
+						<p class="btn-container">
+							<span id="msgBox"></span>
+						</p>
+						<p class="btn-container">
+							<button id="addBookingBtn" class="mid-btn" type="submit">
+								Boka
+							</button>
+						</p>
+					</form>
+				</section>
+			</div>
+		</main>
+
+		<footer>
+			<p class="centered-text">
+				Copyright 2022 | Roadside Garden | Världens ände 1, 621 37 Staden
+			</p>
+			<p class="centered-text">
+				Telefon: <a href="tel:012345678">012-34 56 78</a> |
+				<a href="mailto:roadside@haffupaffu.com">Maila oss</a>
+			</p>
+			<p class="centered-text">
+				Webbutveckling III - Projekt Fredrik Sandström, 2022
+			</p>
+		</footer>
+
+		<script src="./js/main.js"></script>
+		<script src="./js/slideshow.js"></script>
+		<script src="./js/bookingfetch.js"></script>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+/* *********************************  Forms  ********************************* */
+
+#booking {
+	max-width: 40rem;
+}
+
+input[type="username"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="datetime-local"],
+input[type="number"],
+textarea,
+select {
+	width: 100%;
+	padding: 0.8rem 0.6rem;
+	box-sizing: border-box;
+	margin: 0.8rem 0;
+	border-radius: 0.5rem;
+	border: 2px solid grey;
+
+	&:focus {
+		background-color: $c_sec_l;
+		border: 3px solid $c_main;
+	}
+}
+
+input[type="checkbox"] {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+/* **************************** FORM VALIDATE *****************/
+
+.form-control small {
+	color: red;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+fieldset {
+	border: none;
+}
+
+#msgBox {
+	font-size: 1.5rem;
+	@include lg {
+		font-size: 2.5rem;
+	}
+}

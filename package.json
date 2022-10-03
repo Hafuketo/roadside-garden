@@ -1,0 +1,27 @@
+{
+	"name": "moment1_4_vt22-hafuketo",
+	"version": "1.0.0",
+	"description": "web2mom1 test av gulp",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Rick Sandstorm",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@babel/preset-env": "^7.16.11",
+		"browser-sync": "^2.27.9",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-terser": "^2.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"sass": "^1.49.9",
+		"typescript": "^4.6.3"
+	}
+}
